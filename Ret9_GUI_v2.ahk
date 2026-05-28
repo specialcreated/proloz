@@ -65,7 +65,7 @@ StartAntiAFK(*) => StartTask("Анти-AFK", 30000, 60000)
 
 ; === ОСНОВНАЯ ФУНКЦИЯ ЗАПУСКА ===
 StartTask(TaskName, MinD, MaxD) {
-    global Running, CurrentTask, StopFlag, BaseDelayMin, BaseDelayMax, InteractionKey, LogBox, DelayMin, DelayMax, InteractKey
+    global Running, CurrentTask, StopFlag, BaseDelayMin, BaseDelayMax, InteractionKey, LogBox
     
     if (Running) {
         Log("Сначала остановите текущую задачу: " . CurrentTask)
@@ -74,9 +74,9 @@ StartTask(TaskName, MinD, MaxD) {
     
     ; Читаем настройки из GUI
     MyGui.Submit(false)
-    BaseDelayMin := DelayMin
-    BaseDelayMax := DelayMax
-    InteractionKey := InteractKey
+    BaseDelayMin := DelayMinEdit.Value
+    BaseDelayMax := DelayMaxEdit.Value
+    InteractionKey := InteractKeyEdit.Value
     
     Running := true
     CurrentTask := TaskName
@@ -132,9 +132,9 @@ StopAll(*) {
 }
 
 SaveSettings(*) {
-    global LogBox, DelayMin, DelayMax, InteractKey
+    global LogBox
     MyGui.Submit(false)
-    Log("Настройки сохранены: Задержка " . DelayMin . "-" . DelayMax . ", Кнопка: " . InteractKey)
+    Log("Настройки сохранены: Задержка " . DelayMinEdit.Value . "-" . DelayMaxEdit.Value . ", Кнопка: " . InteractKeyEdit.Value)
     MsgBox("Настройки применены!", "Успех", "T64")
 }
 
