@@ -1,1 +1,1 @@
-Nothing should be ignored based on the provided file changes. The only modified file is 'Ret9_GUI_v2.ahk', which appears to be an AutoHotkey source code file and does not fall under any of the categories that should be ignored according to the specified rules.
+Nothing should be ignored in this case. The added file 'Clean_AutoBot.ahk' is an AutoHotkey source code file, which is a legitimate source file that should be tracked in version control. No build artifacts, dependencies, or temporary files are present in the changes.
