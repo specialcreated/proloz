@@ -123,8 +123,8 @@ RunTask(taskInfo, *) {
     ; но цикл while(bIsRunning) позволяет прервать её через флаг.
     try {
         taskInfo.Func(taskInfo.Name)
-    } catch as err {
-        LogBox.Value .= "Ошибка в задаче: " . err.Message . "`n"
+    } catch as e {
+        LogBox.Value .= "Ошибка в задаче: " . e.Message . "`n"
         LogBox.ScrollCaret()
         bIsRunning := false
         LblStatus.Text := "Статус: Ошибка"
