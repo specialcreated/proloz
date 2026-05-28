@@ -1,6 +1,8 @@
 #SingleInstance Force
-SendMode "Input"
-A_SetWorkingDir(A_ScriptDir)
+#Requires AutoHotkey v2.0
+
+SendMode("Input")
+SetWorkingDir(A_ScriptDir)
 #MaxThreadsPerHotkey 5
 
 ; === НАСТРОЙКИ ===

@@ -28,8 +28,11 @@
 ; ============================================================================
 
 #SingleInstance Force
-A_SetWorkingDir(A_ScriptDir)
-A_SetBatchLines(-1)
+#Requires AutoHotkey v2.0
+
+SetWorkingDir(A_ScriptDir)
+SetBatchLines(-1)
+SendMode("Input")
 #MaxThreadsPerHotkey 5
 
 ; ============================================================================
