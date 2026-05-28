@@ -1,1 +1,1 @@
-(empty)
+Nothing should be ignored based on the provided file changes. The only modified file is 'Ret9_GUI_v2.ahk', which appears to be an AutoHotkey source code file and should not be added to .gitignore.
