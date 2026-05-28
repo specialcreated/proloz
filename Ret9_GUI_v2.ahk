@@ -158,7 +158,7 @@ Esc::StopAll()
 ; === УТИЛИТЫ ===
 Log(Message) {
     global LogBox
-    FormatTime(&Time,, "HH:mm:ss")
+    Time := FormatTime(, "HH:mm:ss")
     LogText := "[" . Time . "] " . Message . "`n"
     LogBox.Value := LogText . LogBox.Value
 }
